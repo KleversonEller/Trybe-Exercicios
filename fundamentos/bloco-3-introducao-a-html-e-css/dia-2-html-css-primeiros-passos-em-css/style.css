@@ -1,0 +1,30 @@
+h1 {
+    font-size: 65px;
+    color: orange;
+    font-family: sans-serif;
+}
+ul {
+    background-color: peru;
+}
+.fund-color {
+    font-style: oblique;
+    line-height: 20px;
+    text-align: center;
+    background-color: powderblue;
+}
+p {
+    font-weight: 600;
+    font-size: 3em;
+}
+body {
+    font-size: 16px;
+}
+#cor-1-linha {
+    background-color: yellow;
+}
+#cor-2-linha {
+    background-color: red;
+}
+#cor-3-linha {
+    background-color: burlywood;
+}
