@@ -3,54 +3,44 @@ body{
 }
 ul {
     padding: 0;
+    list-style: none;
+}
+ul.nav li a{
+    text-decoration: none;
+    color: black;
 }
 .header{
-    background-color: aqua;
-    border: solid;
+
 }
 .titulo{
-    background-color: blueviolet;
-    border: solid;
-    text-align: center;
+       text-align: center;
 }
 .nav{
-background-color: brown;
-border: solid;
 text-align: center;
 
 }
-ul.nav li{ 
+ul.nav li { 
     display: inline-block;
     margin: 5px 10%;
+    
 }
 
 .main{
-    background-color: chartreuse;
-    border: solid;
 }
 .artigo{
-    background-color: darkcyan;
-border: solid;
 margin-right: 30%;
 margin-left: 20px;
-
 }
 .fatos{
-    background-color: darkolivegreen;
-    border: solid;
     margin: 10px 05%;
     float: none;
 }
 .caixa-fatos {
-    background-color: bisque;
-    border: solid;
     margin-right: 30%;
     margin-left: 20px;
     padding: 0;
 }
 .bibiografia{
-background-color: darkorange;
-border: solid;
 margin: 20px;
 position: absolute;
 top: 130px;
@@ -59,8 +49,6 @@ right: 0;
 text-align: center;
 }
 .video{
-background-color: deeppink;
-border: solid;
 margin: 20px;
 position: absolute;
 top: 350px;
@@ -69,6 +57,5 @@ left: 70%;
 text-align: center;
 }
 .rodape{
-background-color: mediumblue;
-border: solid;
+text-align: center;
 }
