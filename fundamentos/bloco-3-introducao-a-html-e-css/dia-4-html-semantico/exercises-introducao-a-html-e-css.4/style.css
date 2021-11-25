@@ -1,0 +1,55 @@
+body{
+    margin: 0;
+}
+ul {
+    padding: 0;
+}
+
+.header{
+background-color: aqua;
+border: solid;
+}
+.titulo{
+background-color: blueviolet;
+border: solid;
+text-align: center;
+}
+.nav{
+background-color: brown;
+border: solid;
+text-align: center;
+
+}
+ul.nav li{ 
+display: inline-block;
+margin: 5px 10%;
+}
+
+.main{
+background-color: chartreuse;
+border: solid;
+}
+.artigo{
+background-color: darkcyan;
+border: solid;
+margin: 20px;
+}
+.fatos{
+background-color: darkolivegreen;
+border: solid;
+margin: 20px;
+}
+.bibiografia{
+background-color: darkorange;
+border: solid;
+margin: 20px;
+}
+.video{
+background-color: deeppink;
+border: solid;
+margin: 20px;
+}
+.rodape{
+background-color: mediumblue;
+border: solid;
+}
