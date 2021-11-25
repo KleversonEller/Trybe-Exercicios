@@ -4,15 +4,14 @@ body{
 ul {
     padding: 0;
 }
-
 .header{
-background-color: aqua;
-border: solid;
+    background-color: aqua;
+    border: solid;
 }
 .titulo{
-background-color: blueviolet;
-border: solid;
-text-align: center;
+    background-color: blueviolet;
+    border: solid;
+    text-align: center;
 }
 .nav{
 background-color: brown;
@@ -21,33 +20,53 @@ text-align: center;
 
 }
 ul.nav li{ 
-display: inline-block;
-margin: 5px 10%;
+    display: inline-block;
+    margin: 5px 10%;
 }
 
 .main{
-background-color: chartreuse;
-border: solid;
+    background-color: chartreuse;
+    border: solid;
 }
 .artigo{
-background-color: darkcyan;
+    background-color: darkcyan;
 border: solid;
-margin: 20px;
+margin-right: 30%;
+margin-left: 20px;
+
 }
 .fatos{
-background-color: darkolivegreen;
-border: solid;
-margin: 20px;
+    background-color: darkolivegreen;
+    border: solid;
+    margin: 10px 05%;
+    float: none;
+}
+.caixa-fatos {
+    background-color: bisque;
+    border: solid;
+    margin-right: 30%;
+    margin-left: 20px;
+    padding: 0;
 }
 .bibiografia{
 background-color: darkorange;
 border: solid;
 margin: 20px;
+position: absolute;
+top: 130px;
+left: 70%;
+right: 0;
+text-align: center;
 }
 .video{
 background-color: deeppink;
 border: solid;
 margin: 20px;
+position: absolute;
+top: 350px;
+right: 0;
+left: 70%;
+text-align: center;
 }
 .rodape{
 background-color: mediumblue;
