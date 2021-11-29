@@ -33,3 +33,14 @@ if (primeiroNumeros > segundoNumeros && primeiroNumeros > terceiroNumeros) {
 }
 
 // exercícios que retorna o maior numero dentre tres números.
+
+const positivoOuNegativo = 'azul';
+
+
+if (typeof positivoOuNegativo == 'number' && positivoOuNegativo % 2 === 0) {
+    console.log("Numero Positivo");
+}else if (typeof positivoOuNegativo == 'number' && positivoOuNegativo % 2 !== 0){
+    console.log("Numero Negativo");
+}else {
+    console.log("Não é um numero !");
+}
