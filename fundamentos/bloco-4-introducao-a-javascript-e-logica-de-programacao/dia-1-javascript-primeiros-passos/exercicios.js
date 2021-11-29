@@ -36,11 +36,27 @@ if (primeiroNumeros > segundoNumeros && primeiroNumeros > terceiroNumeros) {
 
 const positivoOuNegativo = 'azul';
 
-
 if (typeof positivoOuNegativo == 'number' && positivoOuNegativo % 2 === 0) {
     console.log("Numero Positivo");
 }else if (typeof positivoOuNegativo == 'number' && positivoOuNegativo % 2 !== 0){
     console.log("Numero Negativo");
 }else {
     console.log("Não é um numero !");
+}
+
+// exercícios que compara um valor e se for um numero retorna se é positivo ou negativo ou caso nao seja um numero retorna "nao é uma numero"
+
+
+const angulo1 = 80;
+const angulo2 = -100;
+const angulo3 = 0;
+
+if (angulo1 >= 0 && angulo2 >= 0 && angulo3 >= 0){
+    if (angulo1 + angulo2 + angulo3 === 180){
+        console.log("Você tem um triângulo");
+    }else{
+        console.log("Você não tem um triângulo");
+    }
+}else {
+    console.log('Isso não é um triângulo');
 }
