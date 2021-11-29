@@ -60,3 +60,34 @@ if (angulo1 >= 0 && angulo2 >= 0 && angulo3 >= 0){
 }else {
     console.log('Isso não é um triângulo');
 }
+
+// exercícios verifica de acordo com os angulos dados se tenho um triangulo valido ou não, sendo que para ele ser valido seus angulos devem ser positivos e a somatoria dos mesmos devem ser igual a 180
+
+
+let pecaXadrez = 'Dama';
+
+switch (pecaXadrez.toLowerCase()) {
+    case 'bispo':
+        console.log("Diagonais");
+        break;
+    case 'peao':
+        console.log("Para frente");
+        break;
+    case 'torre':
+        console.log("Linha reta");
+        break;
+    case 'cavalo':
+        console.log("Em 'L'");
+        break;
+    case 'rainha':
+        console.log("Em todas as direções");
+        break;
+    case 'rei':
+        console.log("Em todas as direções apenas 1 casa");
+        break;
+    default:
+        console.log("Essa não é uma peça valida");
+        break;
+}
+
+// exercícios que verifica uma peça de xadrez e retorna qual movimento ela faz
