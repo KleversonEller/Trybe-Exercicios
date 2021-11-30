@@ -111,3 +111,22 @@ if (nota < 50 && nota > 0){
 }
 
 // exercícios conversor de nota de '%' para nota entre A e F
+
+const numero1 = 20;
+const numero2 = 11;
+const numero3 = 43;
+let parOuNao = false;
+
+if (numero1 % 2 === 0 || numero2 % 2 === 0 || numero3 % 2 === 0) {
+    parOuNao = true;
+}
+console.log(parOuNao);
+
+// exercícios para verificar se um numero dentre 3 é par ou não.
+
+let imparOuNao = false;
+
+if (numero1 % 2 === 0 || numero2 % 2 === 0 || numero3 % 2 === 0) {
+    impraOuNao = true;
+}
+console.log(imparOuNao);
