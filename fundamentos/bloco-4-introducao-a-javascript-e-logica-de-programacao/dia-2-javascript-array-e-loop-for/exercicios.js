@@ -5,4 +5,11 @@ for (const imprimir of numbers) {
 }
 
 // exercício imprimindo valores de um array
+let resultado = 0;
+for ( let index = 0; index < numbers.length; index += 1) {
+    resultado = resultado + numbers[index];
+}
 
+console.log(resultado);
+
+// exercício imprimir a soma dos valores no array
