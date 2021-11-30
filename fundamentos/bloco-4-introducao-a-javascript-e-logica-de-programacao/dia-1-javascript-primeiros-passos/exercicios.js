@@ -34,14 +34,14 @@ if (primeiroNumeros > segundoNumeros && primeiroNumeros > terceiroNumeros) {
 
 // exercícios que retorna o maior numero dentre tres números.
 
-const positivoOuNegativo = 'azul';
+const positivoOuNegativo = -2;
 
-if (typeof positivoOuNegativo == 'number' && positivoOuNegativo % 2 === 0) {
+if (positivoOuNegativo > 0) {
     console.log("Numero Positivo");
-}else if (typeof positivoOuNegativo == 'number' && positivoOuNegativo % 2 !== 0){
+}else if (positivoOuNegativo < 0){
     console.log("Numero Negativo");
 }else {
-    console.log("Não é um numero !");
+    console.log("0");
 }
 
 // exercícios que compara um valor e se for um numero retorna se é positivo ou negativo ou caso nao seja um numero retorna "nao é uma numero"
@@ -91,3 +91,5 @@ switch (pecaXadrez.toLowerCase()) {
 }
 
 // exercícios que verifica uma peça de xadrez e retorna qual movimento ela faz
+
+let nota = 87;
