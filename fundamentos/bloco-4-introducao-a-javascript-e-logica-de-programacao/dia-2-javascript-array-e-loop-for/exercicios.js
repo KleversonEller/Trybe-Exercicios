@@ -13,3 +13,8 @@ for ( let index = 0; index < numbers.length; index += 1) {
 console.log(resultado);
 
 // exercício imprimir a soma dos valores no array
+
+// aproveitando o código de cima para esse exercício
+ let media = resultado / numbers.length;
+
+ console.log(media);
