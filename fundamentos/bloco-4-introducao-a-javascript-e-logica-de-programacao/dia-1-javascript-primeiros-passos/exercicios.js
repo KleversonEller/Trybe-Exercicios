@@ -92,4 +92,22 @@ switch (pecaXadrez.toLowerCase()) {
 
 // exercícios que verifica uma peça de xadrez e retorna qual movimento ela faz
 
-let nota = 87;
+let nota = 1;
+
+if (nota < 50 && nota > 0){
+    console.log("Sua nota é F");
+}else if (nota >= 50 && nota < 60){
+    console.log("Sua nota é E"); 
+}else if (nota >= 60 && nota < 70){
+    console.log("Sua nota é D"); 
+}else if (nota >= 70 && nota < 80){
+    console.log("Sua nota é C"); 
+}else if (nota >= 80 && nota < 90){
+    console.log("Sua nota é B"); 
+}else if (nota >= 90 && nota < 100){
+    console.log("Sua nota é A"); 
+}else {
+    console.log("Essa nao é uma nota valida");
+}
+
+// exercícios conversor de nota de '%' para nota entre A e F
