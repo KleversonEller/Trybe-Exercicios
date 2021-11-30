@@ -130,3 +130,17 @@ if (numero1 % 2 === 0 || numero2 % 2 === 0 || numero3 % 2 === 0) {
     impraOuNao = true;
 }
 console.log(imparOuNao);
+
+// exercícios para verificar se um numero dentre 3 é impar ou não.
+
+const valorCusto = 50;
+const valorVenda = 100;
+const custoTotal = (valorCusto * 0.20) + valorCusto;
+
+if (valorCusto === 0 || valorVenda === 0){
+    console.log("Você não definiu um valor de venda ou de custo");
+}else {
+    console.log((valorVenda - custoTotal) * 1000);
+}
+
+// exercícios calculando o lucro liquido de um produto
