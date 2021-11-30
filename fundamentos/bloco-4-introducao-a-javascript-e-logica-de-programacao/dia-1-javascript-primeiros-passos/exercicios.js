@@ -144,3 +144,34 @@ if (valorCusto === 0 || valorVenda === 0){
 }
 
 // exercícios calculando o lucro liquido de um produto
+
+let salarioBruto = 3000;
+let salarioLiquido = null;
+
+if (salarioBruto <= 1556.94 && salarioBruto > 0){
+    salarioLiquido = salarioBruto - (salarioBruto * 0.08);
+}else if (salarioBruto > 1556.94 && salarioBruto <= 2594.92){
+    salarioLiquido = salarioBruto - (salarioBruto * 0.09);
+}else if (salarioBruto > 2594.92 && salarioBruto <= 5189.82){
+    salarioLiquido = salarioBruto - (salarioBruto * 0.11);
+}else if (salarioBruto > 5189.82){
+    salarioLiquido = salarioBruto - 570.88;
+}
+
+// calculando o INSS
+
+if (salarioLiquido > 4664.68) {
+    salarioLiquido = salarioLiquido - (((27.5 * salarioLiquido) / 100) - 869.36);
+}else if (salarioLiquido > 3751.06 && salarioLiquido <= 4664.68){
+    salarioLiquido = salarioLiquido - (((22.5 * salarioLiquido) / 100) - 636.13);
+}else if (salarioLiquido > 2826.66 && salarioLiquido <= 3751.06){
+    salarioLiquido = salarioLiquido - (((15 * salarioLiquido) / 100) - 354.80);
+}else if (salarioLiquido > 1903.99 && salarioLiquido <= 2826.66){
+    salarioLiquido = salarioLiquido - (((7.5 * salarioLiquido) / 100) - 142.80);
+}
+
+// calculando o IR
+
+
+
+console.log(salarioLiquido);
