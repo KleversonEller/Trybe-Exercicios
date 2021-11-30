@@ -18,3 +18,11 @@ console.log(resultado);
  let media = resultado / numbers.length;
 
  console.log(media);
+
+ // exercício imprime a media da soma dos valores de um array
+
+ if (media <= 20){
+     console.log("Valor menor ou igual a 20");
+ }else {
+     console.log("Valor maior que 20");
+ }
