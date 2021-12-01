@@ -1,0 +1,61 @@
+body{
+    margin: 0;
+}
+ul {
+    padding: 0;
+    list-style: none;
+}
+ul.nav li a{
+    text-decoration: none;
+    color: black;
+}
+.header{
+
+}
+.titulo{
+       text-align: center;
+}
+.nav{
+text-align: center;
+
+}
+ul.nav li { 
+    display: inline-block;
+    margin: 5px 10%;
+    
+}
+
+.main{
+}
+.artigo{
+margin-right: 30%;
+margin-left: 20px;
+}
+.fatos{
+    margin: 10px 05%;
+    float: none;
+}
+.caixa-fatos {
+    margin-right: 30%;
+    margin-left: 20px;
+    padding: 0;
+}
+.bibiografia{
+margin: 20px;
+position: absolute;
+top: 130px;
+left: 70%;
+right: 0;
+text-align: center;
+}
+.video{
+margin: 20px;
+position: absolute;
+top: 350px;
+right: 0;
+left: 70%;
+text-align: center;
+}
+.rodape{
+text-align: center;
+}
