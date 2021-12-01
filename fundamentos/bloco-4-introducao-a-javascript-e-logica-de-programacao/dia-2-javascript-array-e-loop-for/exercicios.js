@@ -70,3 +70,12 @@ let valorDeComparacao2 = null;
  console.log(numerosAte25);
 
  // exercício imprime uma array com os valores de 1 ate 25
+
+ let divisao = [];
+
+ for(let index = 0; index < numerosAte25.length; index += 1){
+    divisao.push(numerosAte25[index] / 2);
+ }
+ console.log(divisao);
+
+  // exercício imprime uma array com os valores da divisao da array criada anteriormente
