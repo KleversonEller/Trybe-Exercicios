@@ -59,3 +59,14 @@ let valorDeComparacao2 = null;
     }
  }
  console.log(valorDeComparacao2);
+
+ // exercício imprime o menor numero do array
+
+ let numerosAte25 = [];
+
+ for(let index = 1; index <= 25; index += 1){
+     numerosAte25.push(index);
+ }
+ console.log(numerosAte25);
+
+ // exercício imprime uma array com os valores de 1 ate 25
