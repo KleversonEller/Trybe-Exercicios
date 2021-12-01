@@ -1,4 +1,4 @@
-let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
+let numbers = [5, 9, 3, 19, 70, 8, 120, 2, 35, 27];
 
 for (const imprimir of numbers) {
     console.log(imprimir);
@@ -26,3 +26,17 @@ console.log(resultado);
  }else {
      console.log("Valor maior que 20");
  }
+
+ // exercício imprime se a media é maior ou menor/igual a 20
+
+let valorDeComparacao = null;
+
+ for ( let index = 0; index < numbers.length; index += 1){
+     let comparador = numbers[index];
+    if (valorDeComparacao < comparador){
+        valorDeComparacao = numbers[index];
+    }
+ }
+ console.log(valorDeComparacao);
+
+// exercício imprime o maior numero de uma array
