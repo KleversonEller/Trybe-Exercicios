@@ -1,4 +1,4 @@
-let numbers = [5, 9, 3, 19, 70, 8, 120, 2, 35, 27];
+let numbers = [5, 9, 3, 19, 70, 13, 120, 2, 35, 27];
 
 for (const imprimir of numbers) {
     console.log(imprimir);
@@ -40,3 +40,9 @@ let valorDeComparacao = null;
  console.log(valorDeComparacao);
 
 // exercício imprime o maior numero de uma array
+let cont = null;
+for (const contador of numbers) {
+    if(contador % 2 === 1){
+        cont = cont + 1;
+    }
+}console.log(cont);
