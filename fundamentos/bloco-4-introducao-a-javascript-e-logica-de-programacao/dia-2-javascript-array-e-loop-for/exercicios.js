@@ -32,8 +32,7 @@ console.log(resultado);
 let valorDeComparacao = null;
 
  for ( let index = 0; index < numbers.length; index += 1){
-     let comparador = numbers[index];
-    if (valorDeComparacao < comparador){
+    if (valorDeComparacao < numbers[index]){
         valorDeComparacao = numbers[index];
     }
  }
@@ -46,3 +45,17 @@ for (const contador of numbers) {
         cont = cont + 1;
     }
 }console.log(cont);
+
+// exercício imprime quanto números ímpares tem dentro da array
+
+let valorDeComparacao2 = null;
+
+ for ( let index = 0; index < numbers.length; index += 1){
+     if(valorDeComparacao2 === null){
+         valorDeComparacao2 = numbers[index];
+        }
+    if (valorDeComparacao2 > numbers[index]){
+        valorDeComparacao2 = numbers[index];
+    }
+ }
+ console.log(valorDeComparacao2);
