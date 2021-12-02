@@ -19,7 +19,7 @@ console.log(wordInverso);
 
 // Imprime a variável ao contrario
 
-let array = ['java', 'javascript', 'python', 'html', 'css'];
+let array = ['javascript', 'java', 'python', 'html', 'css' ];
 let comparador = 0;
 let resultado2 = null;
 let cont = 0;
@@ -33,3 +33,21 @@ for(let palavra of array){
 console.log(resultado2);
 
 // Imprime qual a maior palavra dentro do array
+let comparador2 = 0;
+let cont2 = 0;
+let resultado3 = null;
+
+for (let palavraMenor of array){
+    cont2 = palavraMenor.length
+    if(comparador2 == 0 && resultado3 == null){
+        comparador2 = cont2;
+        resultado3 = palavraMenor;
+    }
+    if(cont2 < comparador2){
+        comparador2 = cont2;
+        resultado3 = palavraMenor;
+    }
+}
+console.log(resultado3);
+
+// Imprime a menor palavra do array
