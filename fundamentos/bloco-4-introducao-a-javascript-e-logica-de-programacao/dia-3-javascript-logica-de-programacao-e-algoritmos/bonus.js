@@ -1,11 +1,11 @@
-let resultado = "";
+let resultado = [];
 let valor = 5;
 
 for (let index = 1; index <= valor; index += 1){
-    resultado += "*";
+    resultado.push("*");
 }
 for(let index = 1; index <= valor; index += 1){
-    console.log(resultado);
+    console.log(resultado.join(""));
 }
 
 // Imprime um quadrado com tamanho equivalentes a um valor dado 
@@ -32,3 +32,16 @@ for(index = 1; index <= valor3; index += 1){
 }
 
 // Imprime um triângulo invertido com tamanho equivalentes a um valor dado 
+
+let resultado4 = [];
+let valor4 = 5;
+
+for (let index = 0; index <= valor4; index += 1){
+    resultado4.push(" ");
+}
+for(let index = 3; index <= valor4; index += 1){
+    resultado4[index] = "*"
+    resultado4[(resultado4.length) - index] = "*"
+    console.log(resultado4.join(""));
+}
+
