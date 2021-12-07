@@ -39,9 +39,10 @@ let valor4 = 5;
 for (let index = 0; index <= valor4; index += 1){
     resultado4.push(" ");
 }
-for(let index = 3; index <= valor4; index += 1){
-    resultado4[index] = "*"
-    resultado4[(resultado4.length) - index] = "*"
-    console.log(resultado4.join(""));
-}
+for(let index = 0; index < valor4 -2; index += 1){
+        resultado4[index + 3] = "*"
+        resultado4[(resultado4.length) - (index + 3)] = "*"
+        console.log(resultado4.join(""));
+    }
 
+// // Imprime uma pirâmide de '*'
