@@ -15,3 +15,9 @@ info.recorrente = "Sim";
 console.log(info);
 
 // Adiciona uma key e imprime o objeto info
+
+for (let keys in info) {
+  console.log(keys);
+}
+
+// Imprime todas as keys do objeto
