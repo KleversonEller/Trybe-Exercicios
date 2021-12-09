@@ -40,4 +40,24 @@ function menorValor(array) {
   return comparador;
 }
 
-console.log(menorValor([2, 4, -6, 7, 10, 0, -3]));
+// Function que retorna o índice do menor valor da array
+
+function maiorNome(array) {
+  let comparador = 0;
+  let contador = 0;
+  let resultado = null;
+
+  for (let nome of array) {
+    for (let letras of nome) {
+      contador += 1;
+    }
+    if (contador > comparador) {
+      comparador = contador;
+      resultado = nome;
+    }
+    contador = 0;
+  }
+  return resultado;
+}
+
+// Function que retorna o maior nome de um array
