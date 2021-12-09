@@ -61,3 +61,25 @@ function maiorNome(array) {
 }
 
 // Function que retorna o maior nome de um array
+
+function maiorRepetidor(array) {
+  let comparador = null;
+  let contador = 0;
+  let repetição = 0;
+
+  for (let numero of array) {
+    for (let repetido of array) {
+      if (numero == repetido) {
+        contador += 1;
+      }
+    }
+    if (contador > repetição) {
+      repetição = contador;
+      comparador = numero;
+    }
+    contador = 0;
+  }
+  return comparador;
+}
+
+// Function que retorna o numero que mais se repete em um array
