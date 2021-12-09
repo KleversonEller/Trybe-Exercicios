@@ -26,3 +26,18 @@ function maiorValor(array) {
 }
 
 // Function que retorna o índice do maior valor da array
+
+function menorValor(array) {
+  let comparador = null;
+  for (let valor in array) {
+    if (comparador === null) {
+      comparador = valor;
+    }
+    if (array[comparador] > array[valor]) {
+      comparador = valor;
+    }
+  }
+  return comparador;
+}
+
+console.log(menorValor([2, 4, -6, 7, 10, 0, -3]));
