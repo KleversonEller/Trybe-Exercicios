@@ -83,3 +83,13 @@ function maiorRepetidor(array) {
 }
 
 // Function que retorna o numero que mais se repete em um array
+
+function somatoria(numero) {
+  let resultado = 0;
+  for (let soma = 1; soma <= numero; soma += 1) {
+    resultado += soma;
+  }
+  return resultado;
+}
+
+// Function que retorna a somatório de 1 ate 'N'
