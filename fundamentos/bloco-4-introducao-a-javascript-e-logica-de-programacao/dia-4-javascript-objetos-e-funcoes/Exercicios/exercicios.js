@@ -21,3 +21,9 @@ for (let keys in info) {
 }
 
 // Imprime todas as keys do objeto
+
+for (let keys in info) {
+  console.log(info[keys]);
+}
+
+// Imprime todos os valores do objeto
