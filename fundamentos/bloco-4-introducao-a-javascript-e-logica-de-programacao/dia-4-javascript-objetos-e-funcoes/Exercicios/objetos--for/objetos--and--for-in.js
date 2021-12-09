@@ -68,3 +68,17 @@ console.log(
 );
 
 // Imprime a frase solicitada utilizando os valores do objeto
+
+leitor.livrosFavoritos.push({
+  titulo: "Harry Potter e o Prisioneiro de Azkaban",
+  autor: "JK Rowling",
+  editor: "Rocco",
+});
+
+// Adiciona um novo objeto no array livrosFavoritos
+
+console.log(
+  leitor.nome + " tem " + leitor.livrosFavoritos.length + " livros favoritos"
+);
+
+// Imprime o nome do leitor e quantos livros favoritos tem
