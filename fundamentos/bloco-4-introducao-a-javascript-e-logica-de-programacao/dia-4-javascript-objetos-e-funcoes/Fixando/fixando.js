@@ -26,7 +26,7 @@ player.bestInTheWorld = [2006, 2007, 2008, 2009, 2010, 2018];
 
 console.log(player.bestInTheWorld);
 
-// Adicionando uma nova Kay no objeto playe
+// Adicionando uma nova Kay no objeto player
 
 console.log(
   "A jogadora " +
