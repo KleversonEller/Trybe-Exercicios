@@ -1,1 +1,0 @@
-player.age + 'anos de idade');
