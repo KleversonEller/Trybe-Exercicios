@@ -27,3 +27,20 @@ for (let keys in info) {
 }
 
 // Imprime todos os valores do objeto
+
+let info2 = {
+  personagem: "Tio Patinhas",
+  origem: "Christmas on Bear Mountain, Dell's Four Color Comics #178",
+  nota: "O último MacPatinhas",
+  recorrente: "Sim",
+};
+
+for (let valor in info) {
+  if (info[valor] == info2[valor]) {
+    console.log("Ambos recorrentes");
+  } else {
+    console.log(info[valor] + " e " + info2[valor]);
+  }
+}
+
+// Criar um novo objeto e imprimir os valores dos dois objetos no formato solicitado
