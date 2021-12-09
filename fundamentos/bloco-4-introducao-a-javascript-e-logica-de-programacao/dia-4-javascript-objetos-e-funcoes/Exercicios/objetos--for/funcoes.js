@@ -93,3 +93,25 @@ function somatoria(numero) {
 }
 
 // Function que retorna a somatório de 1 ate 'N'
+
+function verificaFimPalavra(word, ending) {
+  let palavra1 = [];
+  let palavra2 = [];
+  let resultado = true;
+  for (let letra of word) {
+    palavra1.push(letra);
+  }
+  for (let letra of ending) {
+    palavra2.push(letra);
+  }
+  palavra1.reverse();
+  palavra2.reverse();
+  for (let posicao in ending) {
+    if (palavra1[posicao] != palavra2[posicao]) {
+      resultado = false;
+    }
+  }
+  return resultado;
+}
+
+// Function que verifica se a segunda palavra é o final da primeira palavra
