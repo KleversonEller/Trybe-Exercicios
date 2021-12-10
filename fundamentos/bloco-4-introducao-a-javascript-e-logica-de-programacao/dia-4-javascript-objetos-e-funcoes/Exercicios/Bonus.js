@@ -29,3 +29,25 @@ function conversor(valor) {
 console.log(conversor("XXIV"));
 
 // FIXME  fazer uma logica para calcular quando um numero menor estiver entre dois numeros maiores
+
+function arrayOfNumbers(vector) {
+  let resultado = [];
+  for (let posicao of vector) {
+    for (let numeros of posicao) {
+      if (numeros % 2 == 0) {
+        resultado.push(numeros);
+      }
+    }
+  }
+  return resultado;
+}
+
+console.log(
+  arrayOfNumbers([
+    [1, 2],
+    [3, 4, 5, 6],
+    [7, 8, 9, 10],
+  ])
+);
+
+// Function que retorna um array contendo todos os numeros pares do array de entrada
