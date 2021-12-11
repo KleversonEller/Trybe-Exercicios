@@ -14,3 +14,28 @@ document.querySelector("#elementoOndeVoceEsta").nextElementSibling.innerText =
 document.querySelector(
   "#pai"
 ).lastElementChild.previousElementSibling.style.color = "black";
+
+// Fixando parte II
+let criando = document.createElement("section");
+criando.innerText = "ola";
+document.querySelector("#pai").appendChild(criando);
+let criando2 = document.createElement("section");
+criando2.innerText = "ola";
+document.querySelector("#elementoOndeVoceEsta").appendChild(criando2);
+let criando3 = document.createElement("section");
+criando3.innerText = "ola";
+document.querySelector("#primeiroFilhoDoFilho").appendChild(criando3);
+
+// Fixando parte III
+
+let pai = document.querySelector("#pai");
+let filho = document.querySelector("#elementoOndeVoceEsta");
+let filho2 = document.querySelector("#primeiroFilhoDoFilho");
+let remover = document.querySelectorAll("section");
+
+for (let index = 0; index < remover.length; index += 1) {
+  let elemento = remover[index];
+  if (elemento !== filho && elemento !== pai && elemento !== filho2) {
+    elemento.remove();
+  }
+}
