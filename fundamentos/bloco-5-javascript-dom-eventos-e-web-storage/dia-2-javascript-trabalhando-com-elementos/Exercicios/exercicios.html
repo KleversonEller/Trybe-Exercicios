@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício 5.2</title>
+    <style>
+      section {
+        border-color: black;
+        border-style: solid;
+      }
+
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+
+      .main-content .left-content {
+        background-color: green;
+        width: 60%;
+        margin-left: 0;
+        margin-right: auto;
+      }
+
+      .main-content .left-content .small-image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 100%;
+      }
+
+      .main-content .right-content {
+        background-color: blue;
+        width: 60%;
+        margin-left: auto;
+        margin-right: 0;
+      }
+
+      .main-content .description {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      // COLOQUE SEU CÓDIGO AQUI
+
+      let AddH1 = document.createElement("h1");
+      AddH1.innerText = "Exercício 5.2 - JavaScript DOM";
+      document.querySelector("body").appendChild(AddH1);
+
+      // Criando um elemento h1 com um titulo
+
+      let main = document.createElement("main");
+      main.classList.add("main-content");
+      document.querySelector("body").appendChild(main);
+
+      // Criando um elemento main com uma classe
+
+      let section = document.createElement("section");
+      section.classList.add("center-content");
+      document.querySelector("main").appendChild(section);
+
+      // Criando um elemento section com um classe dentro da main
+
+      let paragrafo = document.createElement("p");
+      paragrafo.innerText = "Texto do primeiro paragrafo";
+      document.querySelector(".center-content").appendChild(paragrafo);
+
+      // Criando um elemento P dentro do elemento section
+
+      let section2 = document.createElement("section");
+      section2.classList.add("left-content");
+      document.querySelector("main").appendChild(section2);
+
+      // Criando um elemento section com um classe dentro da main
+
+      let section3 = document.createElement("section");
+      section3.classList.add("right-content");
+      document.querySelector("main").appendChild(section3);
+
+      // Criando um elemento section com um classe dentro da main
+
+      let imagem = document.createElement("img");
+      imagem.classList.add("small-image");
+      imagem.setAttribute("src", "https://picsum.photos/200");
+      document.querySelector(".left-content").appendChild(imagem);
+
+      // Criando um elemento img com uma classe na section
+
+      let lista = document.createElement("ul");
+      let numeros = [
+        "um",
+        "dois",
+        "tres",
+        "quatro",
+        "cinco",
+        "seis",
+        "sete",
+        "oito",
+        "nove",
+        "dez",
+      ];
+      document.querySelector(".right-content").appendChild(lista);
+      for (let index = 0; index < numeros.length; index += 1) {
+        let linha = document.createElement("li");
+        linha.innerText = numeros[index];
+        document.querySelector(".right-content ul").appendChild(linha);
+      }
+
+      // Criando um elemento de lista ordenada e adicionando os valores de 1 a 10 por extenso como valores da lista
+
+      for (let index = 0; index < 3; index += 1) {
+        let h3 = document.createElement("h3");
+        h3.classList.add("description");
+        document.querySelector("main").appendChild(h3);
+      }
+
+      // Criando tres elemento h3 no elemento main e adicionando uma classe
+
+      AddH1.classList.add("title");
+
+      // Adicionando uma class no elemento H1
+
+      let removendo = document.querySelector("main");
+      let filhoRemovendo = document.querySelector(".left-content");
+      removendo.removeChild(filhoRemovendo);
+
+      // Removendo um elemento
+
+      document.querySelector(".right-content").style.marginRight = "auto";
+
+      // Centralizando um elemento
+
+      let trocaCor = document.querySelector(".center-content").parentElement;
+      trocaCor.style.backgroundColor = "green";
+
+      // Trocando a cor de fundo do elemento
+
+      let linhasLista = document.querySelectorAll(".right-content ul li");
+
+      for (let texto of linhasLista) {
+        if (texto.innerHTML == "nove" || texto.innerHTML == "dez") {
+          texto.remove();
+        }
+      }
+
+      // Removendo elementos da lista
+    </script>
+  </body>
+</html>
