@@ -126,10 +126,40 @@
 
       for (let index = 0; index < 3; index += 1) {
         let h3 = document.createElement("h3");
+        h3.classList.add("description");
         document.querySelector("main").appendChild(h3);
       }
 
-      // Criando tres elemento h3 no elemento main
+      // Criando tres elemento h3 no elemento main e adicionando uma classe
+
+      AddH1.classList.add("title");
+
+      // Adicionando uma class no elemento H1
+
+      let removendo = document.querySelector("main");
+      let filhoRemovendo = document.querySelector(".left-content");
+      removendo.removeChild(filhoRemovendo);
+
+      // Removendo um elemento
+
+      document.querySelector(".right-content").style.marginRight = "auto";
+
+      // Centralizando um elemento
+
+      let trocaCor = document.querySelector(".center-content").parentElement;
+      trocaCor.style.backgroundColor = "green";
+
+      // Trocando a cor de fundo do elemento
+
+      let linhasLista = document.querySelectorAll(".right-content ul li");
+
+      for (let texto of linhasLista) {
+        if (texto.innerHTML == "nove" || texto.innerHTML == "dez") {
+          texto.remove();
+        }
+      }
+
+      // Removendo elementos da lista
     </script>
   </body>
 </html>
