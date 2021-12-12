@@ -58,6 +58,78 @@
   <body>
     <script>
       // COLOQUE SEU CÓDIGO AQUI
+
+      let AddH1 = document.createElement("h1");
+      AddH1.innerText = "Exercício 5.2 - JavaScript DOM";
+      document.querySelector("body").appendChild(AddH1);
+
+      // Criando um elemento h1 com um titulo
+
+      let main = document.createElement("main");
+      main.classList.add("main-content");
+      document.querySelector("body").appendChild(main);
+
+      // Criando um elemento main com uma classe
+
+      let section = document.createElement("section");
+      section.classList.add("center-content");
+      document.querySelector("main").appendChild(section);
+
+      // Criando um elemento section com um classe dentro da main
+
+      let paragrafo = document.createElement("p");
+      paragrafo.innerText = "Texto do primeiro paragrafo";
+      document.querySelector(".center-content").appendChild(paragrafo);
+
+      // Criando um elemento P dentro do elemento section
+
+      let section2 = document.createElement("section");
+      section2.classList.add("left-content");
+      document.querySelector("main").appendChild(section2);
+
+      // Criando um elemento section com um classe dentro da main
+
+      let section3 = document.createElement("section");
+      section3.classList.add("right-content");
+      document.querySelector("main").appendChild(section3);
+
+      // Criando um elemento section com um classe dentro da main
+
+      let imagem = document.createElement("img");
+      imagem.classList.add("small-image");
+      imagem.setAttribute("src", "https://picsum.photos/200");
+      document.querySelector(".left-content").appendChild(imagem);
+
+      // Criando um elemento img com uma classe na section
+
+      let lista = document.createElement("ul");
+      let numeros = [
+        "um",
+        "dois",
+        "tres",
+        "quatro",
+        "cinco",
+        "seis",
+        "sete",
+        "oito",
+        "nove",
+        "dez",
+      ];
+      document.querySelector(".right-content").appendChild(lista);
+      for (let index = 0; index < numeros.length; index += 1) {
+        let linha = document.createElement("li");
+        linha.innerText = numeros[index];
+        document.querySelector(".right-content ul").appendChild(linha);
+      }
+
+      // Criando um elemento de lista ordenada e adicionando os valores de 1 a 10 por extenso como valores da lista
+
+      for (let index = 0; index < 3; index += 1) {
+        let h3 = document.createElement("h3");
+        document.querySelector("main").appendChild(h3);
+      }
+
+      // Criando tres elemento h3 no elemento main
     </script>
   </body>
 </html>
