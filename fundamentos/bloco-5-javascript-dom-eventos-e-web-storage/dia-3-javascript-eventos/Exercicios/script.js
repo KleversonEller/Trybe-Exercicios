@@ -44,11 +44,13 @@ for (let dias of dezDaysList) {
 
 // Cria dinamicamente os elementos dos dias do calendário com os dias e suas classes
 
-let botao = document.createElement("button");
-botao.innerText = "Feriados";
-botao.id = "btn-holiday";
-
-document.querySelector(".buttons-container").appendChild(botao);
+function criaBotao(nomeBotao, id) {
+  let cria = document.createElement("button");
+  cria.innerHTML = nomeBotao;
+  cria.id = id;
+  document.querySelector(".buttons-container").appendChild(cria);
+}
+let botao = criaBotao("Feriados", "btn-holiday");
 
 // Cria um botao com um id
 
@@ -68,3 +70,7 @@ function corBotao(elemento) {
 }
 
 // Altera a cor de fundo dos feriados ao clicar no botao feriados
+
+let botao2 = criaBotao("Sexta-feira", "btn-friday");
+
+// cria o botao sexta-feira
