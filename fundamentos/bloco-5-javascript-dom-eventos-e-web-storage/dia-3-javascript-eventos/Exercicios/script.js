@@ -108,3 +108,13 @@ function tiraZoom(event) {
 }
 
 // Da zoom no dia ao passar o mouse
+
+function criaTarefa(tarefa) {
+  let cria = document.createElement("span");
+  cria.innerText = tarefa;
+  document.querySelector(".my-tasks").appendChild(cria);
+}
+
+criaTarefa("Projeto");
+
+// Function que cria novas tarefas no calendário
