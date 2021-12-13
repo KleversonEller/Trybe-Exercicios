@@ -118,3 +118,11 @@ function criaTarefa(tarefa) {
 criaTarefa("Projeto");
 
 // Function que cria novas tarefas no calendário
+
+function criaLegendaColorida(cor) {
+  let cria = document.createElement("div");
+  cria.style.backgroundColor = cor;
+  document.querySelector(".my-tasks").appendChild(cria);
+}
+
+criaLegendaColorida("green");
