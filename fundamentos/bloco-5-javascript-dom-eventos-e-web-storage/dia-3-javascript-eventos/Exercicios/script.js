@@ -49,3 +49,22 @@ botao.innerText = "Feriados";
 botao.id = "btn-holiday";
 
 document.querySelector(".buttons-container").appendChild(botao);
+
+// Cria um botao com um id
+
+let botaoClick = document.querySelector("#btn-holiday");
+
+botaoClick.addEventListener("click", corBotao);
+
+function corBotao(elemento) {
+  let dias = document.querySelectorAll(".holiday");
+  for (let posicao of dias) {
+    if (posicao.style.background == "greenyellow") {
+      posicao.style.background = "rgb(238,238,238)";
+    } else {
+      posicao.style.background = "greenyellow";
+    }
+  }
+}
+
+// Altera a cor de fundo dos feriados ao clicar no botao feriados
