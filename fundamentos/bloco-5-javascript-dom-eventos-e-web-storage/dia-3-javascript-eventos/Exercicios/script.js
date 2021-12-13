@@ -74,3 +74,20 @@ function corBotao(elemento) {
 let botao2 = criaBotao("Sexta-feira", "btn-friday");
 
 // cria o botao sexta-feira
+
+let botaoClick2 = document.querySelector("#btn-friday");
+let sextas = [4, 11, 18, 25];
+botaoClick2.addEventListener("click", textoSexta);
+
+function textoSexta(elemento) {
+  let dias2 = document.querySelectorAll(".friday");
+  for (let posicao in dias2) {
+    if (dias2[posicao].innerHTML !== "Mufasa") {
+      dias2[posicao].innerHTML = "Mufasa";
+    } else {
+      dias2[posicao].innerHTML = sextas[posicao];
+    }
+  }
+}
+
+// Altera o texto das sexta-feira
