@@ -43,3 +43,9 @@ for (let dias of dezDaysList) {
 }
 
 // Cria dinamicamente os elementos dos dias do calendário com os dias e suas classes
+
+let botao = document.createElement("button");
+botao.innerText = "Feriados";
+botao.id = "btn-holiday";
+
+document.querySelector(".buttons-container").appendChild(botao);
