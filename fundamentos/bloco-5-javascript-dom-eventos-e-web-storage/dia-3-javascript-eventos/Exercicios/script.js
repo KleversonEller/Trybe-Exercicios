@@ -58,7 +58,7 @@ let botaoClick = document.querySelector("#btn-holiday");
 
 botaoClick.addEventListener("click", corBotao);
 
-function corBotao(elemento) {
+function corBotao() {
   let dias = document.querySelectorAll(".holiday");
   for (let posicao of dias) {
     if (posicao.style.background == "greenyellow") {
@@ -79,15 +79,32 @@ let botaoClick2 = document.querySelector("#btn-friday");
 let sextas = [4, 11, 18, 25];
 botaoClick2.addEventListener("click", textoSexta);
 
-function textoSexta(elemento) {
+function textoSexta() {
   let dias2 = document.querySelectorAll(".friday");
   for (let posicao in dias2) {
-    if (dias2[posicao].innerHTML !== "Mufasa") {
-      dias2[posicao].innerHTML = "Mufasa";
+    if (dias2[posicao].innerHTML !== "Mufasa Day") {
+      dias2[posicao].innerHTML = "Mufasa Day";
     } else {
       dias2[posicao].innerHTML = sextas[posicao];
     }
   }
 }
 
-// Altera o texto das sexta-feira
+// Altera o texto das sexta-feiras
+
+let days = document.querySelector("#days");
+
+days.addEventListener("mouseover", zoom);
+
+function zoom(event) {
+  event.target.style.fontSize = "30px";
+  event.target.style.fontWeight = "600";
+}
+days.addEventListener("mouseout", tiraZoom);
+
+function tiraZoom(event) {
+  event.target.style.fontWeight = "200";
+  event.target.style.fontSize = "20px";
+}
+
+// Da zoom no dia ao passar o mouse
