@@ -145,3 +145,20 @@ function selecionaTarefa(event) {
 }
 
 // Function que cria uma classe ao clicar
+
+let selecao2 = document.getElementsByClassName("task-selected");
+let corSelecao2 = document.querySelector(".task");
+let cor = corSelecao2.style.backgroundColor;
+
+days.addEventListener("click", trocaCor);
+
+function trocaCor(event) {
+  let corLetra = event.target.style.color;
+
+  if (selecao2.length > 0 && corLetra !== cor) {
+    let color = selecao2[0].style.backgroundColor;
+    event.target.style.color = color;
+  } else if (corLetra === cor && selecao2.length !== 0) {
+    event.target.style.color = "rgb(119,119,119)";
+  }
+}
