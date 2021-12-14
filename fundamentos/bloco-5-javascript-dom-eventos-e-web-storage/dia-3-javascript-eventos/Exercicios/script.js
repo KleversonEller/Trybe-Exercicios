@@ -162,3 +162,35 @@ function trocaCor(event) {
     event.target.style.color = "rgb(119,119,119)";
   }
 }
+
+// Troca a cor do dia que for clicado
+
+function addNewTask() {
+  let compromiso = document.querySelector("#task-input");
+  let botaoAdd = document.querySelector("#btn-add");
+  let listaCompromiso = document.querySelector(".task-list");
+
+  botaoAdd.addEventListener("click", function () {
+    if (compromiso.value.length > 0) {
+      let linha = document.createElement("li");
+      linha.innerText = compromiso.value;
+
+      listaCompromiso.appendChild(linha);
+      compromiso.value = "";
+    } else {
+      alert("Error: Digite ao menos 1 caractere.");
+    }
+  });
+
+  compromiso.addEventListener("keyup", function (event) {
+    if (event.key === "Enter" && compromiso.value.length > 0) {
+      let linha = document.createElement("li");
+      linha.innerText = compromiso.value;
+
+      listaCompromiso.appendChild(linha);
+      compromiso.value = "";
+    }
+  });
+}
+
+addNewTask();
