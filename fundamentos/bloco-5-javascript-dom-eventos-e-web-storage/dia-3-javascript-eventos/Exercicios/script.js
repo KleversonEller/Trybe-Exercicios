@@ -122,7 +122,26 @@ criaTarefa("Projeto");
 function criaLegendaColorida(cor) {
   let cria = document.createElement("div");
   cria.style.backgroundColor = cor;
+  cria.classList.add("task");
   document.querySelector(".my-tasks").appendChild(cria);
 }
 
 criaLegendaColorida("green");
+
+// Function que cria legenda para as tarefas
+
+let tarefas2 = document.querySelector(".my-tasks");
+tarefas2.addEventListener("click", selecionaTarefa);
+
+function selecionaTarefa(event) {
+  if (
+    event.target.classList == "task task-selected" ||
+    event.target.classList == "task-selected"
+  ) {
+    event.target.classList.remove("task-selected");
+  } else {
+    event.target.classList.add("task-selected");
+  }
+}
+
+// Function que cria uma classe ao clicar
