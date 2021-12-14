@@ -58,7 +58,7 @@ let botaoClick = document.querySelector("#btn-holiday");
 
 botaoClick.addEventListener("click", corBotao);
 
-function corBotao(elemento) {
+function corBotao() {
   let dias = document.querySelectorAll(".holiday");
   for (let posicao of dias) {
     if (posicao.style.background == "greenyellow") {
@@ -79,15 +79,118 @@ let botaoClick2 = document.querySelector("#btn-friday");
 let sextas = [4, 11, 18, 25];
 botaoClick2.addEventListener("click", textoSexta);
 
-function textoSexta(elemento) {
+function textoSexta() {
   let dias2 = document.querySelectorAll(".friday");
   for (let posicao in dias2) {
-    if (dias2[posicao].innerHTML !== "Mufasa") {
-      dias2[posicao].innerHTML = "Mufasa";
+    if (dias2[posicao].innerHTML !== "Mufasa Day") {
+      dias2[posicao].innerHTML = "Mufasa Day";
     } else {
       dias2[posicao].innerHTML = sextas[posicao];
     }
   }
 }
 
-// Altera o texto das sexta-feira
+// Altera o texto das sexta-feiras
+
+let days = document.querySelector("#days");
+
+days.addEventListener("mouseover", zoom);
+
+function zoom(event) {
+  event.target.style.fontSize = "30px";
+  event.target.style.fontWeight = "600";
+}
+days.addEventListener("mouseout", tiraZoom);
+
+function tiraZoom(event) {
+  event.target.style.fontWeight = "200";
+  event.target.style.fontSize = "20px";
+}
+
+// Da zoom no dia ao passar o mouse
+
+function criaTarefa(tarefa) {
+  let cria = document.createElement("span");
+  cria.innerText = tarefa;
+  document.querySelector(".my-tasks").appendChild(cria);
+}
+
+criaTarefa("Projeto");
+
+// Function que cria novas tarefas no calendário
+
+function criaLegendaColorida(cor) {
+  let cria = document.createElement("div");
+  cria.style.backgroundColor = cor;
+  cria.classList.add("task");
+  document.querySelector(".my-tasks").appendChild(cria);
+}
+
+criaLegendaColorida("green");
+
+// Function que cria legenda para as tarefas
+
+let tarefas2 = document.querySelector(".my-tasks");
+tarefas2.addEventListener("click", selecionaTarefa);
+
+function selecionaTarefa(event) {
+  if (
+    event.target.classList == "task task-selected" ||
+    event.target.classList == "task-selected"
+  ) {
+    event.target.classList.remove("task-selected");
+  } else {
+    event.target.classList.add("task-selected");
+  }
+}
+
+// Function que cria uma classe ao clicar
+
+let selecao2 = document.getElementsByClassName("task-selected");
+let corSelecao2 = document.querySelector(".task");
+let cor = corSelecao2.style.backgroundColor;
+
+days.addEventListener("click", trocaCor);
+
+function trocaCor(event) {
+  let corLetra = event.target.style.color;
+
+  if (selecao2.length > 0 && corLetra !== cor) {
+    let color = selecao2[0].style.backgroundColor;
+    event.target.style.color = color;
+  } else if (corLetra === cor && selecao2.length !== 0) {
+    event.target.style.color = "rgb(119,119,119)";
+  }
+}
+
+// Troca a cor do dia que for clicado
+
+function addNewTask() {
+  let compromiso = document.querySelector("#task-input");
+  let botaoAdd = document.querySelector("#btn-add");
+  let listaCompromiso = document.querySelector(".task-list");
+
+  botaoAdd.addEventListener("click", function () {
+    if (compromiso.value.length > 0) {
+      let linha = document.createElement("li");
+      linha.innerText = compromiso.value;
+
+      listaCompromiso.appendChild(linha);
+      compromiso.value = "";
+    } else {
+      alert("Error: Digite ao menos 1 caractere.");
+    }
+  });
+
+  compromiso.addEventListener("keyup", function (event) {
+    if (event.key === "Enter" && compromiso.value.length > 0) {
+      let linha = document.createElement("li");
+      linha.innerText = compromiso.value;
+
+      listaCompromiso.appendChild(linha);
+      compromiso.value = "";
+    }
+  });
+}
+
+addNewTask();
