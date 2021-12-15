@@ -7,23 +7,51 @@
   </head>
   <body>
     <main>
-      <div id="center-conteiner">
-        <select name="corFundo" id="fundo">
-          <option value="white">Branco</option>
-          <option value="green">Verde</option>
-          <option value="blue">Azul</option>
-          <option value="red">Vermelho</option>
-          <option value="orange">Laranja</option>
-        </select>
+      <select name="corFundo" id="fundo">
+        <option value="" disabled selected hidden>Cor do fundo</option>
+        <option value="white">Branco</option>
+        <option value="green">Verde</option>
+        <option value="blue">Azul</option>
+        <option value="red">Vermelho</option>
+        <option value="orange">Laranja</option>
+      </select>
 
-        <select name="corLetra" id="letra">
-          <option value="white">Branco</option>
-          <option value="green">Verde</option>
-          <option value="blue">Azul</option>
-          <option value="red">Vermelho</option>
-          <option value="orange">Laranja</option>
-        </select>
-      </div>
+      <select name="corLetra" id="letra">
+        <option value="" disabled selected hidden>Cor da letra</option>
+        <option value="black">Preto</option>
+        <option value="white">Branco</option>
+        <option value="green">Verde</option>
+        <option value="blue">Azul</option>
+        <option value="red">Vermelho</option>
+        <option value="orange">Laranja</option>
+      </select>
+
+      <input
+        type="number"
+        name="fonte"
+        min="1"
+        placeholder="Tamanho da fonte"
+      />
+
+      <select name="espaçoLinha" id="linha">
+        <option value="" disabled selected hidden>
+          Espaçamento entre linhas
+        </option>
+        <option value="normal">Tamanho padrão</option>
+        <option value="1.5">Meia linha</option>
+        <option value="2">Uma linha</option>
+        <option value="2.5">Uma linha e meia</option>
+        <option value="3">Duas linhas</option>
+      </select>
+
+      <select name="fonte" id="fonte">
+        <option value="" disabled selected hidden>Tipo de fonte</option>
+        <option value="Times">Times</option>
+        <option value="Helvetica">Helvetica</option>
+        <option value="Courier">Courier</option>
+        <option value="Arial">Arial</option>
+        <option value="monospace">Monospace</option>
+      </select>
       <p>
         A própria dor é o amor, o principal sistema de armazenamento. Aenean
         pulvinar fringilla elit sed elementum. Mecenas sentam-se amet accumsan
