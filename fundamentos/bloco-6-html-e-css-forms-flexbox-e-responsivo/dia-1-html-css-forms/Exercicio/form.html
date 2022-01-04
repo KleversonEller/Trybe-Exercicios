@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="" method="get">
+      <fieldset>
+        <label for="nome"
+          >Nome:
+          <input
+            type="text"
+            maxlength="40"
+            id="nome"
+            name="nome"
+            required
+            placeholder="Digite seu nome"
+          /> </label
+        ><br /><br />
+        <label for="email"
+          >E-mail:
+          <input
+            type="email"
+            maxlength="50"
+            id="email"
+            name="email"
+            required
+            placeholder="Digite seu e-mail"
+          /> </label
+        ><br /><br />
+        <label for="cpf"
+          >CPF:
+          <input
+            type="text"
+            maxlength="11"
+            id="cpf"
+            name="cpf"
+            required
+            placeholder="Digite seu CPF"
+          /> </label
+        ><br /><br />
+        <label for="endereco"
+          >Endereço:
+          <input
+            type="text"
+            maxlength="200"
+            id="endereco"
+            name="endereço"
+            required
+            placeholder="Digite seu endereço"
+          /> </label
+        ><br /><br />
+        <label for="cidade"
+          >Cidade:
+          <input
+            type="text"
+            maxlength="28"
+            id="cidade"
+            name="cidade"
+            required
+            placeholder="Digite sua cidade"
+          /> </label
+        ><br /><br />
+        <label for="estados"
+          >Selecione seu estado:
+          <select name="estados" id="estados" required ></select> </label
+        ><br /><br />
+        <label for="casa">
+          <input type="radio" name="tipo-casa" id="casa" required checked/>Casa
+        </label>
+        <label for="ap">
+          <input type="radio" name="tipo-casa" id="ap" required />Apartamento
+        </label>
+      </fieldset><br>
+      <fieldset>
+        <p>Escreva um resumo do seu currículo:</p>
+        <textarea
+          name="resumo-curriculo"
+          id="resumo-curriculo"
+          cols="50"
+          rows="15"
+          maxlength="1000"
+          required
+        ></textarea
+        ><br /><br />
+        <label for="cargo"
+          >Cargo:
+          <input
+            type="text"
+            maxlength="40"
+            id="cargo"
+            name="cargo"
+            required
+            placeholder="Digite sue cargo"
+          /> </label
+        ><br /><br />
+        <label for="desc-cargo"
+          >Descrição do cargo:
+          <input
+            type="text"
+            maxlength="500"
+            id="desc-cargo"
+            name="desc-cargo"
+            required
+            placeholder="Digite a descrição do seu cargo"
+          /> </label
+        ><br /><br />
+        <label for="data"
+          >Data de início:
+          <input type="date" id="data" name="data" required /> </label
+        ><br /><br />
+      </fieldset><br></br>
+      <button type="submit" id="enviar">Enviar</button>
+      <button type="reset"id="limpar">Limpar</button>
+    </form><br>
+    <div id="erros" style="border: solid 1px;">
+        <h4>Campos obrigatórios que devem ser preenchidos</h4>
+    </div><br>
+    <div id="resumo" style="border: solid 1px;">
+        <h4>Resumo das suas informações</h4>    
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
