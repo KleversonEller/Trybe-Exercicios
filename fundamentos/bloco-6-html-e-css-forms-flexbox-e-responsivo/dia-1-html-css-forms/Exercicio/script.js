@@ -81,6 +81,8 @@ window.onload = function () {
       "cpf",
       "endereço",
       "cidade",
+      "tipo-casa",
+      "estados",
       "resumo-curriculo",
       "cargo",
       "desc-cargo",
@@ -92,7 +94,17 @@ window.onload = function () {
       let erros = document.querySelector("#erros");
       let cria = document.createElement("p");
       let validarCampo = document.querySelector(`[name=${validador}]`).value;
-      if (validarCampo.length > 0) {
+
+      if (validarCampo === "Casa") {
+        let tipoCasa = document.querySelector("[name=tipo-casa]").checked;
+        if (tipoCasa === true) {
+          cria.innerHTML = `${validador}: Casa`;
+          resumo.appendChild(cria);
+        } else {
+          cria.innerHTML = `${validador}: Apartamento`;
+          resumo.appendChild(cria);
+        }
+      } else if (validarCampo.length > 0) {
         cria.innerHTML = `${validador}: ${validarCampo}`;
         resumo.appendChild(cria);
       } else {
