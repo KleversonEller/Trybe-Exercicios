@@ -1,0 +1,23 @@
+body {
+  background-color: #91b4cf;
+}
+
+main {
+  width: 700px;
+  margin: 0 auto;
+}
+
+fieldset {
+  border-radius: 5px;
+  padding: 35px;
+  background-color: whitesmoke;
+  margin-bottom: 35px;
+}
+
+div {
+  margin-bottom: 15px;
+}
+
+header {
+  margin: 20px;
+}
