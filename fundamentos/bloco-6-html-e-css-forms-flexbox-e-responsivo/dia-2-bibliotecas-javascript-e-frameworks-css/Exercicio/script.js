@@ -73,66 +73,28 @@ window.onload = function () {
 
   let botaoEnviar = document.querySelector("#enviar");
 
-  botaoEnviar.addEventListener("click", function (evento) {
-    evento.preventDefault();
-    let valores = [
-      "nome",
-      "email",
-      "cpf",
-      "endereço",
-      "cidade",
-      "tipo-casa",
-      "estados",
-      "resumo-curriculo",
-      "cargo",
-      "desc-cargo",
-      "data",
-    ];
-    limpar();
-    for (let validador of valores) {
-      let resumo = document.querySelector("#resumo");
-      let erros = document.querySelector("#erros");
-      let cria = document.createElement("p");
-      let validarCampo = document.querySelector(`[name=${validador}]`).value;
+  botaoEnviar.addEventListener("click", function () {
+    let forms = document.querySelectorAll(".needs-validation");
 
-      if (validarCampo === "Casa") {
-        let tipoCasa = document.querySelector("[name=tipo-casa]").checked;
-        if (tipoCasa === true) {
-          cria.innerHTML = `${validador}: Casa`;
-          resumo.appendChild(cria);
-        } else {
-          cria.innerHTML = `${validador}: Apartamento`;
-          resumo.appendChild(cria);
-        }
-      } else if (validarCampo.length > 0) {
-        cria.innerHTML = `${validador}: ${validarCampo}`;
-        resumo.appendChild(cria);
-      } else {
-        cria.innerHTML = `Você deve preencher o campo: ${validador}`;
-        erros.appendChild(cria);
-      }
-    }
+    Array.prototype.slice.call(forms).forEach(function (form) {
+      form.addEventListener(
+        "submit",
+        function (event) {
+          if (!form.checkValidity()) {
+            event.preventDefault();
+            event.stopPropagation();
+          }
+
+          form.classList.add("was-validated");
+        },
+        false
+      );
+    });
   });
-
-  function limpar() {
-    let resumo = document.querySelector("#resumo");
-    let erros = document.querySelector("#erros");
-    let limparResumo = document.querySelectorAll("#resumo p");
-    let limparErros = document.querySelectorAll("#erros p");
-    if (limparErros.length > 0) {
-      for (let possicao of limparErros) {
-        erros.removeChild(possicao);
-      }
-    }
-
-    if (limparResumo.length > 0) {
-      for (let possicao of limparResumo) {
-        resumo.removeChild(possicao);
-      }
-    }
-  }
 
   let botaoLimpar = document.querySelector("#limpar");
 
-  botaoLimpar.addEventListener("click", limpar);
+  botaoLimpar.addEventListener("click", function () {
+    location.reload();
+  });
 };
