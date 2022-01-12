@@ -15,3 +15,19 @@ console.log(fatorial(5));
 const fatorialRecursivo = numero => numero > 1 ? numero * fatorial(numero - 1) : 1;
 
 console.log(fatorialRecursivo(5));
+
+//! Exercicio 2 qual a maior palavra da frase
+
+const maiorPalavra = frase => {
+    let maiorPalavra = null;
+    let resultado = 0;
+    for (let palavra of frase.split(" ")){
+        if (palavra.length > resultado) {
+            resultado = palavra.length;
+            maiorPalavra = palavra;
+        }
+    }
+    return maiorPalavra
+};
+
+console.log(maiorPalavra("Bom dia a todos"));
