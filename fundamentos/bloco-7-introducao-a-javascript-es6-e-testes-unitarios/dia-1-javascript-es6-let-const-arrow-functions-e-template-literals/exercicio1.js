@@ -14,7 +14,7 @@
 
 // testingScope(true);
 
-//! Refatorando o codigo acima 
+//! Exercicio 1 - Refatorando o codigo acima 
 
 const testingScope = escopo => {
     if (escopo === true) {
@@ -26,3 +26,21 @@ const testingScope = escopo => {
       console.log(elseScope);
     }
   }
+
+
+//   const oddsAndEvens = [13, 3, 4, 10, 7, 2];
+
+//   // Seu código aqui.
+
+//   console.log(oddsAndEvens); // será necessário alterar essa linha 😉
+
+  //! Exercicio 2 - Refatorando o codigo acima 
+
+
+  const oddsAndEvens = [13, 3, 4, 10, 7, 2];
+
+  // Seu código aqui.
+const ordena = (a, b) => (a < b) ? -1 : 1;
+
+  console.log(oddsAndEvens.sort(ordena)); // será necessário alterar essa linha 😉
+  
