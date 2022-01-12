@@ -40,3 +40,11 @@ botao.addEventListener('click', () => {
     let contador = document.querySelector('#conta');
     contador.innerHTML = parseInt(contador.innerHTML) + 1;
 })
+
+
+//! Exercicio 4 concatenando frases
+const skills = ['lint', 'bibliotecas', 'ES6.7.8...', 'programação'];
+const euSou = palavra => `Eu sou ${palavra} por estudar`;
+const formaFrase = (palavra1, palavra2) => `${euSou(palavra1)} ${skills.sort().join(', ')} enquanto uso ${palavra2}`;
+
+console.log(formaFrase('louco', 'pijama azul'));
