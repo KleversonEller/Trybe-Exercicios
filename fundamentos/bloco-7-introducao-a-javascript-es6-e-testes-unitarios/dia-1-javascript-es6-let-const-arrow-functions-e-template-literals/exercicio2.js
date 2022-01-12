@@ -31,3 +31,12 @@ const maiorPalavra = frase => {
 };
 
 console.log(maiorPalavra("Bom dia a todos"));
+
+//! Exercicio 3 contando quantidade de clicks
+
+const botao = document.querySelector('#click')
+
+botao.addEventListener('click', () => {
+    let contador = document.querySelector('#conta');
+    contador.innerHTML = parseInt(contador.innerHTML) + 1;
+})
