@@ -2,8 +2,8 @@ const acordar = () => `Acordando!!`;
 const cafe = () => `Bora tomar café!!`;
 const dormi = () => `Partiu dormir!!`;
 
-const doingThings = (fun) => console.log(fun());
+const doingThings = (fun) => fun();
 
-doingThings(acordar);
-doingThings(cafe);
-doingThings(dormi);
+console.log(doingThings(acordar));
+console.log(doingThings(cafe));
+console.log(doingThings(dormi));
